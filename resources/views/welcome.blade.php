@@ -33,12 +33,19 @@
        
 @include('Admin.partial.header')
 
-
+<div class="main-panel">
+  <div class="content-wrapper">
+    <div class="row">
         <!-- partial -->
 @yield('content')
+@yield('part')
           <!-- content-wrapper ends -->
           <!-- partial:partials/_footer.html -->
-         
+      </div>      
+     </div>     
+ 
+      </div>     
+    </div>     
 @include('Admin.partial.footer')
 
           <!-- partial -->

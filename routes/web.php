@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\AdoptionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('content');
+
+   
 });
+Route::get('/adoption/add',[AdoptionController::class,'adoptionAdd'])->name('admin.adoption.add');
