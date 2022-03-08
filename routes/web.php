@@ -20,3 +20,4 @@ Route::get('/', function () {
    
 });
 Route::get('/adoption/add',[AdoptionController::class,'adoptionAdd'])->name('admin.adoption.add');
+Route::view('/dashboard','admin.dashboard')->name('dashboard');
