@@ -7,8 +7,8 @@ use Illuminate\Http\Request;
 
 class FoodController extends Controller
 {
-    public function createfood()
+    public function createFood()
     {
-      return view ('Admin.partial.pages.food.create');
+      return view ('Admin.pages.food.create');
     }
 }

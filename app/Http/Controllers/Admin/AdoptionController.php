@@ -7,9 +7,6 @@ use Illuminate\Http\Request;
 
 class AdoptionController extends Controller
 {
- public function adoptionAdd()
- {
-     return view('Admin.partial.pages.adoptionform');
- }
+
 
 }
