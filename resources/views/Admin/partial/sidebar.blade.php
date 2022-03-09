@@ -88,6 +88,7 @@
               <span class="menu-title">Form Elements</span>
             </a>
           </li>
+          
           <li class="nav-item menu-items">
             <a class="nav-link" href="pages/tables/basic-table.html">
               <span class="menu-icon">
@@ -96,14 +97,16 @@
               <span class="menu-title">Tables</span>
             </a>
           </li>
+
           <li class="nav-item menu-items">
-            <a class="nav-link" href="pages/charts/chartjs.html">
+            <a class="nav-link" href="{{route('admin.create.food')}}">
               <span class="menu-icon">
                 <i class="mdi mdi-chart-bar"></i>
               </span>
-              <span class="menu-title">Charts</span>
+              <span class="menu-title">Food</span>
             </a>
           </li>
+
           <li class="nav-item menu-items">
             <a class="nav-link" href="pages/icons/mdi.html">
               <span class="menu-icon">

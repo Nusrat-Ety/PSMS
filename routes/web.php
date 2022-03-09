@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\FoodController;
 use App\Http\Controllers\Admin\AdoptionController;
 
 /*
@@ -20,3 +21,4 @@ Route::get('/', function () {
    
 });
 Route::get('/adoption/add',[AdoptionController::class,'adoptionAdd'])->name('admin.adoption.add');
+Route::get('/create/food',[FoodController::class,'createfood'])->name('admin.create.food');

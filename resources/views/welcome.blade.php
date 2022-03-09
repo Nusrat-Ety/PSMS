@@ -26,27 +26,25 @@
     <div class="container-scroller">
       <!-- partial:partials/_sidebar.html -->
       
-@include('Admin.partial.sidebar')
+          @include('Admin.partial.sidebar')
 
       <!-- partial -->
       <div class="container-fluid page-body-wrapper">
        
-@include('Admin.partial.header')
+          @include('Admin.partial.header')
 
-<div class="main-panel">
-  <div class="content-wrapper">
-    <div class="row">
-        <!-- partial -->
-@yield('content')
-@yield('part')
-          <!-- content-wrapper ends -->
-          <!-- partial:partials/_footer.html -->
-      </div>      
-     </div>     
- 
-      </div>     
-    </div>     
-@include('Admin.partial.footer')
+          <div class="main-panel">
+            <div class="content-wrapper">
+              <div class="row">
+                  <!-- partial -->
+                  @yield('content')
+                    <!-- content-wrapper ends -->
+                    <!-- partial:partials/_footer.html -->
+                </div>      
+            </div>     
+          </div>     
+        
+          @include('Admin.partial.footer')
 
           <!-- partial -->
         </div>
