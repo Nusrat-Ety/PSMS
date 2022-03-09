@@ -23,6 +23,8 @@ Route::get('/', function () {
 Route::get('/adoption/add',[AdoptionController::class,'adoptionAdd'])->name('admin.adoption.add');
 
 Route::get('/create/food',[FoodController::class,'createfood'])->name('admin.create.food');
+Route::get('/create/category',[AccessoryController::class,'createccessory'])->name('admin.create.category');
+
 
 Route::view('/dashboard','admin.dashboard')->name('dashboard');
 
