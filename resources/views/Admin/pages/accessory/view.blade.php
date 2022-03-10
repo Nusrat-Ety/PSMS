@@ -16,10 +16,6 @@
     </tr>
   </thead>
   <tbody>
-  @foreach ($viewaccessory as $key=>$accessory)
-    <tr>
-    <td>{{$key+1}}</td>
-    <td>{{$accessory->category}}</td>
     <td>{{$accessory->name}}</td>
     <td>{{$accessory->details}}</td>
     <td>{{$accessory->quantity}}</td>
