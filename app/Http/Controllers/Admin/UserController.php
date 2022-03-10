@@ -44,7 +44,7 @@ class UserController extends Controller
             $file=$request->file('Imagefile');
             $userimage=date('Ymdhms').'.'.$file->getClientOriginalExtension();
             // dd($file);
-            $file->storeAs('/uploads',$userimage);
+            $file->storeAs('/uploads/users/',$userimage);
         }
         
         // dd ($request->all());
