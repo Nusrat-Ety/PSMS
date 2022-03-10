@@ -13,12 +13,20 @@ class AccessoryController extends Controller
         return view ('Admin.pages.accessory.create');
     }
     public function submitAccessory(Request $request)
-    {
+    { 
+        $accessoryimage=null;
+        if($request->hasFile('accessory_image')){
+            
+            $accessoryimage=date('Ymdhms').'.'.$request->file('accessory_image')->getClientOriginalExtension();
+            $request->file('accessory_image')->storeAs('/uploads/accessory/',$accessoryimage);
+        }
+
        Accessory::create([
         'category'=>$request->category,
         'name'=>$request->name,
         'details'=>$request->details,
         'quantity'=>$request->quantity,
+        'image'=>$accessoryimage,
         'price'=>$request->price,
        ]);
 

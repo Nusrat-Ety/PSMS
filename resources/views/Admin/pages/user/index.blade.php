@@ -33,7 +33,7 @@
       <td>{{$user->role->name}}</td>
       {{-- <td>{{$user->status}}</td> --}}
       <td>
-        <img width="100px" src="{{url('/uploads/'.$user->image)}}" alt="">
+        <img width="100px" src="{{url('/uploads/users/'.$user->image)}}" alt="">
       </td>
 
                    

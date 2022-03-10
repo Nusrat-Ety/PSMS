@@ -8,8 +8,8 @@
       <th scope="col">Id</th>
       <th scope="col">Category</th>
       <th scope="col">Name</th>
-      <th scope="col">Details</th>
       <th scope="col">Quantity</th>
+      <th scope="col">Image</th>
       <th scope="col">Price</th> 
       <th scope="col">Action</th>
 
@@ -21,8 +21,10 @@
     <td>{{$key+1}}</td>
     <td>{{$accessory->category}}</td>
     <td>{{$accessory->name}}</td>
-    <td>{{$accessory->details}}</td>
     <td>{{$accessory->quantity}}</td>
+    <td>
+     <img  style="width: 50px;height:50px;"src="{{url('/uploads/accessory/'.$accessory->image)}}">
+    </td>
     <td>{{$accessory->price}}</td>
     <td>
         <a class="btn btn-primary" href="">Details</a>

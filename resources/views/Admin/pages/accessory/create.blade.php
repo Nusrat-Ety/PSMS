@@ -11,7 +11,7 @@
         {{ session()->get('success') }}
 </p>
 @endif
-<form action="{{route('admin.submit.accessory')}}" method="post" enctype="multipart/form-data">
+<form action="{{route('admin.submit.accessory')}}" method="POST" enctype="multipart/form-data">
 @csrf
   <h1>Accessory Form</h1>
    <div>
@@ -36,6 +36,10 @@
     <div class="form-outline mb-4" style="width: 50%">
       <input type="number" name="quantity" id="form6Example5" class="input-group input-group-outline" />
       <label class="form-label" for="form6Example5">Quantity</label>
+    </div>
+    <div class="form-outline mb-4" style="width: 50%">
+      <input type="file" name="accessory_image" id="form6Example5" class="input-group input-group-outline" />
+      <label class="form-label" for="form6Example5">Image</label>
     </div>
   
   
