@@ -1,4 +1,9 @@
-<footer class="footer py-4  ">
+<style type="text/css">
+  .footer {
+  bottom: 0;
+}
+</style>
+<footer class="footer py-4">
   <div class="container-fluid">
     <div class="row align-items-center justify-content-lg-between">
       <div class="col-lg-6 mb-lg-0 mb-4">

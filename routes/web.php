@@ -2,9 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\FoodController;
+use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\AdoptionController;
 use App\Http\Controllers\Admin\AccessoryController;
-use App\Http\Controllers\Admin\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,11 +18,10 @@ use App\Http\Controllers\Admin\UserController;
 |
 */
 
-Route::get('/', function () {
-    return view('content');
+Route::get('/', [HomeController::class,'dashboard'])->name('dashboard');
 
    
-});
+
 
 Route::get('/create/food',[FoodController::class,'createFood'])->name('admin.create.food');
 Route::post('/submit/food',[FoodController::class,'submitFood'])->name('admin.submit.food');
@@ -33,7 +33,7 @@ Route::post('/submit/accessory',[AccessoryController::class,'submitAccessory'])-
 Route::get('/view/accessory',[AccessoryController::class,'viewAccessory'])->name('admin.view.accessory');
 Route::get('/delete/accessory/{id}',[AccessoryController::class,'deleteAccessory'])->name('admin.delete.accessory');
 
-// Route::view('/dashboard','admin.dashboard')->name('dashboard');
+Route::view('/dashboard','admin.dashboard')->name('dashboard');
 
 //user
 Route::resource('users',UserController::class);
