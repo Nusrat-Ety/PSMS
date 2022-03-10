@@ -49,13 +49,13 @@
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
   <!-- Nucleo Icons -->
-  <link href="../backend/css/icons.css" rel="stylesheet" />
-  <link href="../backend/css/svg.css" rel="stylesheet" />
+  <link href="{{url('Backend/css/icons.css')}}" rel="stylesheet" />
+  <link href="{{url('Backend/css/svg.css')}}" rel="stylesheet" />
   
   <!-- Material Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
   <!-- CSS Files -->
-  <link id="pagestyle" href="../backend/css/bootstrap.css" rel="stylesheet" />
+  <link id="pagestyle" href="{{url('Backend/css/bootstrap.css')}}" rel="stylesheet" />
   <!-- Anti-flicker snippet (recommended)  -->
   <style>
     .async-hide {
@@ -133,7 +133,9 @@
     <!-- Navbar -->
     @include('admin.partial.navbar')
     <!-- End Navbar -->
+
     <!-- <div class="container-fluid py-4">
+
       <div class="row">
         <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
           <div class="card">
@@ -203,14 +205,17 @@
             </div>
           </div>
         </div>
-      </div> -->
-      
+
+      </div>
+    </div>
+       --}}
            
     
- @yield('content')
+       
+@yield('content')
 
      
-           <div class="container" style="height: 300px">
+           <div class="container" >
 
             
            </div>
@@ -558,13 +563,13 @@
   <!-- Github buttons -->
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
-  <script src="../backend/js/bootstrap.js"></script>
-  <script src="../backend/js/chartjs.js"></script>
-  <script src="../backend/js/dashboard.js"></script>
-  <script src="../backend/js/font.js"></script>
-  <script src="../backend/js/perfect.js"></script>
-  <script src="../backend/js/popper.js"></script>
-  <script src="../backend/js/smooth.js"></script>
+  <script src="{{url('Backend/js/bootstrap.js')}}"></script>
+  <script src="{{url('Backend/js/chartjs.js')}}"></script>
+  <script src="{{url('Backend/js/dashboard.js')}}"></script>
+  <script src="{{url('Backend/js/font.js')}}"></script>
+  <script src="{{url('Backend/js/perfect.js')}}"></script>
+  <script src="{{url('Backend/js/popper.js')}}"></script>
+  <script src="{{url('Backend/js/smooth.js')}}"></script>
 </body>
 
 </html>

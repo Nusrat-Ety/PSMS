@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\FoodController;
 use App\Http\Controllers\Admin\AdoptionController;
 use App\Http\Controllers\Admin\AccessoryController;
+use App\Http\Controllers\Admin\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,4 +34,7 @@ Route::get('/view/accessory',[AccessoryController::class,'viewAccessory'])->name
 Route::get('/delete/accessory/{id}',[AccessoryController::class,'deleteAccessory'])->name('admin.delete.accessory');
 
 // Route::view('/dashboard','admin.dashboard')->name('dashboard');
+
+//user
+Route::resource('users',UserController::class);
 
