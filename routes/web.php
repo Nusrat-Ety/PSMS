@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\FoodController;
 use App\Http\Controllers\Admin\AdoptionController;
+use App\Http\Controllers\Admin\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,4 +25,7 @@ Route::get('/', function () {
 Route::get('/create/food',[FoodController::class,'createFood'])->name('admin.create.food');
 
 // Route::view('/dashboard','admin.dashboard')->name('dashboard');
+
+//user
+Route::resource('users',UserController::class);
 
