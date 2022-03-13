@@ -6,6 +6,8 @@ use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\AdoptionController;
 use App\Http\Controllers\Admin\AccessoryController;
+use App\Http\Controllers\Admin\PetController;
+use App\Http\Controllers\Admin\VetController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,8 +35,23 @@ Route::post('/submit/accessory',[AccessoryController::class,'submitAccessory'])-
 Route::get('/view/accessory',[AccessoryController::class,'viewAccessory'])->name('admin.view.accessory');
 Route::get('/delete/accessory/{id}',[AccessoryController::class,'deleteAccessory'])->name('admin.delete.accessory');
 
-Route::view('/dashboard','admin.dashboard')->name('dashboard');
+//Adoption-donation 
+Route::get('/create/adoption/donation', [AdoptionController::class,'create'])->name('adoption.donation.create');
+
+//vet
+Route::get('/create/vet',[VetController::class,'create'])->name('vet.create');
+
+// Route::view('/dashboard','admin.dashboard')->name('dashboard');
 
 //user
 Route::resource('users',UserController::class);
+
+
+//pet
+Route::get('/list/pet',[PetController::class,'petList'])->name('pet.list');
+//breed
+Route::get('/create/breed',[PetController::class,'breedCreate'])->name('breed.create');
+
+//type
+Route::get('/type/create',[PetController::class,'typeCreate'])->name('type.create');
 
