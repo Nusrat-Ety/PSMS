@@ -42,4 +42,5 @@ class AccessoryController extends Controller
         $accessory=Accessory::find($id)->delete();
         return redirect ()->back()->with('success','Accessory Deleted Succesfully');
     }
+    
 }
