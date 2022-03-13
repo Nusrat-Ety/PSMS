@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('service_name');
             $table->string('details');
-            $table->string('price');
+            $table->double('price');
             $table->string('status')->default('active');
             $table->timestamps();
         });

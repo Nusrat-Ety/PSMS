@@ -37,9 +37,13 @@ Route::get('/delete/accessory/{id}',[AccessoryController::class,'deleteAccessory
 
 //Adoption-donation 
 Route::get('/create/adoption/donation', [AdoptionController::class,'create'])->name('adoption.donation.create');
+Route::get('/list/adoption/donation', [AdoptionController::class,'list'])->name('adoption.donation.list');
+Route::post('/store/adoption/donation', [AdoptionController::class,'store'])->name('adoption.donation.store');
 
 //vet
 Route::get('/create/vet',[VetController::class,'create'])->name('vet.create');
+Route::get('/list/vet',[VetController::class,'list'])->name('vet.list');
+Route::post('/store/vet',[VetController::class,'store'])->name('vet.store');
 
 // Route::view('/dashboard','admin.dashboard')->name('dashboard');
 
