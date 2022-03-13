@@ -6,9 +6,9 @@
     @if (session()->has('msg'))
      <p class="alert alert-success">{{session()->get('msg')}}</p>
 @endif
-<form  action="#" method="POST" enctype="multipart/form-data">
+<form  action="{{route('adoption.donation.store')}}" method="POST" enctype="multipart/form-data">
   @csrf
-  <h1>Adoption Form</h1>
+  <h1>Donation Form</h1>
     <!-- 2 column grid layout with text inputs for the first and last names -->
     <div class="row mb-4">
       <div class="col">
@@ -44,34 +44,39 @@
     <!-- Number input -->
     <div class="form-outline mb-4">
       <label class="form-label" for="form6Example6">Pet's Category</label>
-      <input name="Imagefile"style="height:3rem;" type="text" id="fileinput" class="input-group input-group-outline" />
+      <input name="category" style="height:3rem;" type="text" id="fileinput" class="input-group input-group-outline" />
       
     </div>
     <div class="form-outline mb-4">
       <label class="form-label" for="form6Example6">Pet's Age</label>
-      <input name="Imagefile"style="height:3rem;" type="number" id="fileinput" class="input-group input-group-outline" />
+      <input name="age" style="height:3rem;" type="number" id="fileinput" class="input-group input-group-outline" />
       
     </div>
   
     <!-- Message input -->
     <div class="form-outline mb-4">
       <label class="form-label" for="form6Example7">Pet's Quantity</label>
-      <input name="address"style="height:3rem;" type="number" id="form6Example6" class="input-group input-group-outline" />
+      <input name="quantity" style="height:3rem;" type="number" id="form6Example6" class="input-group input-group-outline" />
      
     </div>
     <div class="form-outline mb-4">
       <label class="form-label" for="form6Example7">Health Condition</label>
-      <input name="address"style="height:3rem;" type="text" id="form6Example6" class="input-group input-group-outline" />
+      <input name="health" style="height:3rem;" type="text" id="form6Example6" class="input-group input-group-outline" />
      
     </div>
     <div class="form-outline mb-4">
       <label class="form-label" for="form6Example7">Vaccine Date</label>
-      <input name="address"style="height:3rem;" type="date" id="form6Example6" class="input-group input-group-outline" />
+      <input name="vaccine_date"style="height:3rem;" type="date" id="form6Example6" class="input-group input-group-outline" />
      
     </div>
     <div class="form-outline mb-4">
       <label class="form-label" for="form6Example7">Vaccine Dose</label>
-      <input name="address"style="height:3rem;" type="text" id="form6Example6" class="input-group input-group-outline" />
+      <input name="vaccine_dose" style="height:3rem;" type="text" id="form6Example6" class="input-group input-group-outline" />
+     
+    </div>
+    <div class="form-outline mb-4 form-control">
+      <label class="form-label" for="form6Example7">Image</label>
+      <input name="image" style="height:3rem;" type="file" id="form6Example6" class="input-group input-group-outline" />
      
     </div>
   

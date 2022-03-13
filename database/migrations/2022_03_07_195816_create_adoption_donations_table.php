@@ -15,18 +15,19 @@ return new class extends Migration
     {
         Schema::create('adoption_donations', function (Blueprint $table) {
             $table->id();
-            $table->integer('user_id');
-            $table->integer('pet_id');
+            $table->integer('user_id')->nullable();
+            $table->integer('pet_id')->nullable();
             $table->string('name');
             $table->string('email');
             $table->string('address');
             $table->string('phone');
-            $table->string('pet_category');
-            $table->integer('pet_quantity');
-            $table->integer('pet_age');
-            $table->string('health_condition');
+            $table->string('category');
+            $table->integer('quantity');
+            $table->integer('age');
+            $table->string('health');
             $table->date('vaccine_date');
             $table->string('vaccine_dose');
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }

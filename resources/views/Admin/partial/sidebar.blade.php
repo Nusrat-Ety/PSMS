@@ -27,7 +27,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white " href="{{route('adoption.donation.create')}}">
+        <a class="nav-link text-white " href="{{route('adoption.donation.list')}}">
           <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
             <i class="material-icons opacity-10">receipt_long</i>
           </div>
@@ -43,7 +43,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white " href="{{route('vet.create')}}">
+        <a class="nav-link text-white " href="{{route('vet.list')}}">
           <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
             <i class="material-icons opacity-10">receipt_long</i>
           </div>

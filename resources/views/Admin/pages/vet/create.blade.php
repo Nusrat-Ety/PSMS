@@ -6,7 +6,7 @@
     @if (session()->has('msg'))
      <p class="alert alert-success">{{session()->get('msg')}}</p>
 @endif
-<form  action="#" method="POST" enctype="multipart/form-data">
+<form  action="{{route('vet.store')}}" method="POST" enctype="multipart/form-data">
   @csrf
   <h1>Vet Form</h1>
     <!-- 2 column grid layout with text inputs for the first and last names -->
@@ -14,7 +14,7 @@
       <div class="col">
         <div class="form-control">
           <label class="form-label" for="form6Example1">Service Name</label>
-          <input name="name" style="height:3rem;" type="text" id="form6Example1" class="input-group input-group-outline" />
+          <input name="service_name" style="height:3rem;" type="text" id="form6Example1" class="input-group input-group-outline" />
           
         </div>
       </div>
