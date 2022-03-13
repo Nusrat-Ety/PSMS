@@ -15,6 +15,7 @@
       <th scope="col">Email</th>
       <th scope="col">Contact</th>
       <th scope="col">Pet's Category</th>
+      <th scope="col">Pet's Breed</th>
       <th scope="col">Pet's Age</th>
       <th scope="col">Quantity</th>
       <th scope="col">Health condition</th>
@@ -33,7 +34,8 @@
       <td>{{$donation->email}}</td>
       <td>{{$donation->address}}</td>
       <td>{{$donation->phone}}</td>
-      <td>{{$donation->category}}</td>
+      <td>{{$donation->types->name}}</td>
+      <td>{{$donation->breeds->name}}</td>
       <td>{{$donation->age}}</td>
       <td>{{$donation->quantity}}</td>
       <td>{{$donation->health}}</td>

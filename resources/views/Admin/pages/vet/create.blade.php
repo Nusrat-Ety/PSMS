@@ -21,7 +21,7 @@
       <div class="col">
         <div class="form-control">
           <label class="form-label" for="form6Example2">Details</label>
-          <input name="text" style="height:3rem;" type="email" id="form6Example2" class="input-group input-group-outline" />
+          <input name="details" style="height:3rem;" type="email" id="form6Example2" class="input-group input-group-outline" />
          
         </div>
       </div>
@@ -30,7 +30,7 @@
     <!-- Text input -->
     <div class="form-outline mb-4">
       <label class="form-label" for="form6Example3">Price</label>
-      <input name="address" style="height:3rem;" type="number" id="form6Example3" class="input-group input-group-outline" />
+      <input name="price" style="height:3rem;" type="number" id="form6Example3" class="input-group input-group-outline" />
       
     </div>
   

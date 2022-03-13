@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\AdoptionDonation;
+use App\Models\Breed;
 use Illuminate\Http\Request;
+use App\Models\Type;
 
 class AdoptionController extends Controller
 {
@@ -15,7 +17,9 @@ class AdoptionController extends Controller
     }
     public function create()
     {
-        return view('Admin.pages.adoption-donation.create');
+        $types=Type::all();
+        $breeds=Breed::all();
+        return view('Admin.pages.adoption-donation.create',compact('types','breeds'));
     }
     public function store(Request $req)
     {
@@ -38,20 +42,7 @@ class AdoptionController extends Controller
 
 
 
-        ]);  $req->validate([
-            'name'=>'required',
-            'email'=>'required',
-            'address'=>'required',
-            'phone'=>'required',
-            'age'=>'required',
-            'quantity'=>'required',
-            'health'=>'required',
-            'vaccine_date'=>'required',
-            'vaccine_dose'=>'required',
-
-
-
-        ]);
+        ]);  
 
         AdoptionDonation::create([
             
@@ -59,7 +50,8 @@ class AdoptionController extends Controller
             'email'=>$req->email,
             'address'=>$req->address,
             'phone'=>$req->phone,
-            'category'=>$req->category,
+            'type_id'=>$req->type,
+            'breed_id'=>$req->breed,
             'age'=>$req->age,
             'quantity'=>$req->quantity,
             'health'=>$req->health,
