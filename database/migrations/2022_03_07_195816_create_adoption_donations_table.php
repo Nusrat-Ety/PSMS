@@ -21,7 +21,8 @@ return new class extends Migration
             $table->string('email');
             $table->string('address');
             $table->string('phone');
-            $table->string('category');
+            $table->string('type_id');
+            $table->string('breed_id');
             $table->integer('quantity');
             $table->integer('age');
             $table->string('health');

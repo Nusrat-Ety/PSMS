@@ -55,7 +55,9 @@ Route::resource('users',UserController::class);
 Route::get('/list/pet',[PetController::class,'petList'])->name('pet.list');
 //breed
 Route::get('/create/breed',[PetController::class,'breedCreate'])->name('breed.create');
+Route::post('/store/breed',[PetController::class,'breedStore'])->name('breed.store');
 
 //type
 Route::get('/type/create',[PetController::class,'typeCreate'])->name('type.create');
+Route::post('/store/create',[PetController::class,'typeStore'])->name('type.store');
 

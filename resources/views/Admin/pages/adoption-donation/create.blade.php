@@ -40,13 +40,27 @@
       <input name="phone" style="height:3rem;" type="email" id="floatingemail" class="input-group input-group-outline" />
       
     </div>
-  
-    <!-- Number input -->
-    <div class="form-outline mb-4">
-      <label class="form-label" for="form6Example6">Pet's Category</label>
-      <input name="category" style="height:3rem;" type="text" id="fileinput" class="input-group input-group-outline" />
-      
+    <div class="form-group mb-4">
+      <label class="form-label" for="floatingInput">Pet's Category</label>
+
+    <select name="type" class="input-group input-group-outline" placeholder="Select Pet's Category" style="height:3rem;" aria-label="Default select example">
+      <option selected>Select Pet's Category</option>
+      @foreach ($types as $type)
+      <option value="{{$type->id}}">{{$type->name}}</option>
+      @endforeach
+    </select>
     </div>
+    <div class="form-group mb-4">
+      <label class="form-label" for="floatingInput">Pet's Breed</label>
+
+    <select name="breed" class="input-group input-group-outline" placeholder="Select Pet's Category" style="height:3rem;" aria-label="Default select example">
+      <option selected>Select Pet's Breed</option>
+      @foreach ($breeds as $breed)
+      <option value="{{$breed->id}}">{{$breed->name}}</option>
+      @endforeach
+    </select>
+    </div>
+
     <div class="form-outline mb-4">
       <label class="form-label" for="form6Example6">Pet's Age</label>
       <input name="age" style="height:3rem;" type="number" id="fileinput" class="input-group input-group-outline" />

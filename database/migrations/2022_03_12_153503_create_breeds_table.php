@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('breeds', function (Blueprint $table) {
             $table->id();
-            $table->string('breed');
+            $table->string('name');
             $table->string('details');
             $table->timestamps();
         });
