@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\FoodController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\PetController;
 use App\Http\Controllers\Admin\AdoptionController;
 use App\Http\Controllers\Admin\AccessoryController;
 
@@ -33,8 +34,13 @@ Route::post('/submit/accessory',[AccessoryController::class,'submitAccessory'])-
 Route::get('/view/accessory',[AccessoryController::class,'viewAccessory'])->name('admin.view.accessory');
 Route::get('/delete/accessory/{id}',[AccessoryController::class,'deleteAccessory'])->name('admin.delete.accessory');
 
-Route::view('/dashboard','admin.dashboard')->name('dashboard');
 
 //user
 Route::resource('users',UserController::class);
+
+//pet
+
+Route::get('/index/pet',[PetController::class,'indexpet'])->name('admin.index.pet');
+Route::get('/create/pet',[PetController::class,'createpet'])->name('admin.create.pet');
+Route::post('/store/pet',[PetController::class,'storepet'])->name('admin.store.pet');
 
