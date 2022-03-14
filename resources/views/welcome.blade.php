@@ -148,6 +148,9 @@
            </div>
            </div>
            </div>
+           <div style="height: 350px">
+
+           </div>
            
       {{-- footer --}}
       @include('admin.partial.footer')

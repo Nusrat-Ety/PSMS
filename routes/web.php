@@ -7,6 +7,8 @@ use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\PetController;
 use App\Http\Controllers\Admin\AdoptionController;
 use App\Http\Controllers\Admin\AccessoryController;
+use App\Http\Controllers\Admin\PetController;
+use App\Http\Controllers\Admin\VetController;
 
 /*
 |--------------------------------------------------------------------------
