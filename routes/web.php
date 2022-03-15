@@ -24,17 +24,23 @@ use App\Http\Controllers\Admin\AccessoryController;
 Route::get('/', [HomeController::class,'dashboard'])->name('dashboard');
 
    
-
+//food
 
 Route::get('/create/food',[FoodController::class,'createFood'])->name('admin.create.food');
 Route::post('/submit/food',[FoodController::class,'submitFood'])->name('admin.submit.food');
 Route::get('/view/food',[FoodController::class,'viewFood'])->name('admin.view.food');
 Route::get('/delete/food/{id}',[FoodController::class,'deleteFood'])->name('admin.delete.food');
+Route::get('/edit/food/{id}',[FoodController::class,'editFood'])->name('admin.edit.food');
+Route::put('/update/food/{id}',[FoodController::class,'updateFood'])->name('admin.update.food');
+
+//accessory
 
 Route::get('/create/accessory',[AccessoryController::class,'createAccessory'])->name('admin.create.accessory');
 Route::post('/submit/accessory',[AccessoryController::class,'submitAccessory'])->name('admin.submit.accessory');
 Route::get('/view/accessory',[AccessoryController::class,'viewAccessory'])->name('admin.view.accessory');
 Route::get('/delete/accessory/{id}',[AccessoryController::class,'deleteAccessory'])->name('admin.delete.accessory');
+Route::get('/edit/accessory/{id}',[AccessoryController::class,'editAccessory'])->name('admin.edit.accessory');
+Route::put('/update/accessory/{id}',[AccessoryController::class,'updateAccessory'])->name('admin.update.accessory');
 
 
 //user
