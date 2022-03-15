@@ -1,9 +1,12 @@
 @extends('welcome')
 
 @section('content')
-<p>
-  <a href="{{route('users.create')}}" class="btn btn-success">Create New User</a>
-</p>
+<div style="display: flex;">
+  <p style="padding-right:10px;">
+    <a href="{{route('users.create')}}" class="btn btn-success">Create New User</a>
+  </p>
+</div>
+
 
 <table class="table">
   
