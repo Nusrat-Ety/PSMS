@@ -1,14 +1,17 @@
 @extends('welcome')
 
 @section('content')
-<p>
-  <a href="{{route('users.create')}}" class="btn btn-success">Create New User</a>
-</p>
+<div style="display: flex;">
+  <p style="padding-right:10px;">
+    <a href="{{route('users.create')}}" class="btn btn-success">Create New User</a>
+  </p>
+</div>
+
 
 <table class="table">
   
   <thead>
-    <tr>
+    <tr style="    text-align: center;background-color:powderblue;">
       <th scope="col">Id</th>
       {{-- <th scope="col">Type_ID</th> --}}
       <th scope="col">Name</th>
@@ -23,7 +26,7 @@
    </thead>
     <tbody> 
     @foreach($users as $key=>$user)
-    <tr>
+    <tr style="    text-align: center;">
   
       <td>{{$key+1}}</td>
       <td>{{$user->name}}</td>

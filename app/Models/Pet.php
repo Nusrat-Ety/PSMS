@@ -5,9 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Food extends Model
+class Pet extends Model
 {
     use HasFactory;
-    // protected $table='foods';
     protected $guarded=[];
+    public function type()
+    {
+       return $this->belongsTo(Type::class,'type_id','id'); 
+    }
 }

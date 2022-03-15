@@ -42,6 +42,7 @@ class AccessoryController extends Controller
         $accessory=Accessory::find($id)->delete();
         return redirect ()->back()->with('success','Accessory Deleted Succesfully');
     }
+
     public function editAccessory($id)
     {
         $accessory=Accessory::find($id);
@@ -76,4 +77,6 @@ class AccessoryController extends Controller
                 ]);
                 return redirect ()->route('admin.view.accessory')->with('success','Accessory Updated');
     }
+
+    
 }

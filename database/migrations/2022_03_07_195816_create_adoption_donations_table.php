@@ -15,6 +15,20 @@ return new class extends Migration
     {
         Schema::create('adoption_donations', function (Blueprint $table) {
             $table->id();
+            $table->integer('user_id')->nullable();
+            $table->integer('pet_id')->nullable();
+            $table->string('name');
+            $table->string('email');
+            $table->string('address');
+            $table->string('phone');
+            $table->string('type_id');
+            $table->string('breed_id');
+            $table->integer('quantity');
+            $table->integer('age');
+            $table->string('health');
+            $table->date('vaccine_date');
+            $table->string('vaccine_dose');
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }
