@@ -5,9 +5,10 @@ use App\Http\Controllers\Admin\FoodController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\PetController;
-use App\Http\Controllers\Admin\AdoptionController;
+use App\Http\Controllers\Admin\RoleController;
+use App\Http\Controllers\Admin\PermissionController;
 use App\Http\Controllers\Admin\AccessoryController;
-use App\Http\Controllers\Admin\VetController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -45,4 +46,16 @@ Route::get('/index/pet',[PetController::class,'indexpet'])->name('admin.index.pe
 Route::get('/create/pet',[PetController::class,'createpet'])->name('admin.create.pet');
 Route::post('/store/pet',[PetController::class,'storepet'])->name('admin.store.pet');
 Route::post('/show/pet',[PetController::class,'showpet'])->name('admin.show.pet');
+
+//role
+
+Route::get('/index/role',[RoleController::class,'indexrole'])->name('admin.role.index');
+Route::get('/create/role',[RoleController::class,'createrole'])->name('admin.role.create');
+Route::post('/store/role',[RoleController::class,'storerole'])->name('admin.role.store');
+
+//permission
+
+Route::get('/index/permission/',[PermissionController::class,'indexpermission'])->name('admin.permission.index');
+Route::get('/create/permission/',[PermissionController::class,'createpermission'])->name('admin.permission.create');
+Route::post('/store/permission/',[PermissionController::class,'storepermission'])->name('admin.permission.store');
 
