@@ -7,7 +7,6 @@ use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\PetController;
 use App\Http\Controllers\Admin\AdoptionController;
 use App\Http\Controllers\Admin\AccessoryController;
-use App\Http\Controllers\Admin\PetController;
 use App\Http\Controllers\Admin\VetController;
 
 /*
@@ -45,4 +44,5 @@ Route::resource('users',UserController::class);
 Route::get('/index/pet',[PetController::class,'indexpet'])->name('admin.index.pet');
 Route::get('/create/pet',[PetController::class,'createpet'])->name('admin.create.pet');
 Route::post('/store/pet',[PetController::class,'storepet'])->name('admin.store.pet');
+Route::post('/show/pet',[PetController::class,'showpet'])->name('admin.show.pet');
 
