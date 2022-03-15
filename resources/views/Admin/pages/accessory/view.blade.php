@@ -29,7 +29,7 @@
     <td>
         <a class="btn btn-primary" href="">Details</a>
         <a class="btn btn-info" href="{{route('admin.delete.accessory',$accessory->id)}}">Delete</a>
-        <a class="btn btn-info" href="">Edit</a>
+        <a class="btn btn-info" href="{{route('admin.edit.accessory',$accessory->id)}}">Edit</a>
       </td>
     </tr>
   @endforeach
