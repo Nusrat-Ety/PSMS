@@ -27,7 +27,7 @@
       <td>{{$pet->name}}</td>
       <td>{{$pet->breed}}</td>
       <td>{{$pet->age}}</td>
-      <td>{{$pet->type->type}}</td>
+      <td>{{$pet->type->name}}</td>
       <td>
         <img width="50px" src="{{url('/uploads/pets/'.$pet->image)}}" alt="">
       </td>               

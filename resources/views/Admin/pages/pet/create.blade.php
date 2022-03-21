@@ -41,7 +41,7 @@
       <label class="form-label" for="role">Pet_Type</label>
        <select name="pettype" id="role"style="height:3rem;" class="input-group input-group-outline">
           @foreach($types as $type)
-                <option value="{{$type->id}}">{{$type->type}}</option>
+                <option value="{{$type->id}}">{{$type->name}}</option>
                      @endforeach
        </select>
       

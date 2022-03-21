@@ -14,26 +14,26 @@ class UserSeeder extends Seeder
      *
      * @return void
      */
-    // public function run()
-    // {
-    //     User::create(
-    //         [
-    //          'name'=>'Admin',
-    //          'email'=>'admin@gmail.com',
-    //          'password'=>bcrypt('123456'),
-    //         ]
-    //         );
-    // }
-
-
     public function run()
     {
-        Role::create(
+        User::create(
             [
-             'name'=>'user',
-             'slug'=>'user',
-             'status'=>'active',
+             'name'=>'Admin',
+             'email'=>'admin@gmail.com',
+             'password'=>bcrypt('123'),
             ]
             );
     }
+
+
+    // public function run()
+    // {
+    //     Role::create(
+    //         [
+    //          'name'=>'user',
+    //          'slug'=>'user',
+    //          'status'=>'active',
+    //         ]
+    //         );
+    // }
 }
