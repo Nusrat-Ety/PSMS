@@ -37,6 +37,11 @@
       <input type="number" name="quantity" id="form6Example5" class="input-group input-group-outline" />
       <label class="form-label" for="form6Example5">Quantity</label>
     </div>
+
+    <div class="form-outline mb-4" style="width: 50%">
+      <input type="file" name="food_image" id="form6Example5" class="input-group input-group-outline" />
+      <label class="form-label" for="form6Example5">Image</label>
+</div>
   
   
     <div class="form-outline mb-4" style="width: 50%";>
