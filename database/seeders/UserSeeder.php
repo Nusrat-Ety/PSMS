@@ -16,9 +16,20 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
+        $role=Role::create ([
+            'name'=>'admin',
+            'slug'=>'log in of Admin',
+
+        ]);
+    
+
+   
+   
         User::create(
             [
-             'name'=>'Admin',
+             
+             'role_id'=>$role->id,
+             'name'=>'Maliha',
              'email'=>'admin@gmail.com',
              'password'=>bcrypt('123'),
             ]

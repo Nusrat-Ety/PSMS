@@ -1,4 +1,5 @@
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
@@ -33,7 +34,7 @@ body{
             <div id="login-row" class="row justify-content-center align-items-center">
                 <div id="login-column" class="col-md-6">
                     <div id="login-box" class="col-md-12">
-                        <form id="login-form" class="form" action="#" method="POST">
+                        <form id="login-form" class="form" action="{{route('admin.dologin.store')}}" method="POST">
                          @csrf
                             <h3 class="text-center text-info">Login</h3>
                             <div class="form-group">
@@ -44,9 +45,19 @@ body{
                                 <label for="password" class="text-info">Password:</label><br>
                                 <input type="password" name="password" id="password" class="form-control">
                             </div>
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-primary">Login</button>
+                            <div style="display:flex;">
+                             
+                                <div class="form-group" style="padding: 10px;">
+                                    <button type="submit" class="btn btn-primary">Login</button>
+                                </div>
+                                <div class="container-login100-form-btn" style="padding:10px;">
+                                    <a href="{{route('login.facebook')}}" class="btn btn-primary">
+                                        <i class="fa-brands fa-facebook"></i>
+                                        Login With Facebook</a>
+                                </div>
+
                             </div>
+                           
                         </form>
                     </div>
                 </div>

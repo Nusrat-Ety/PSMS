@@ -21,11 +21,15 @@ use App\Http\Controllers\Admin\AccessoryController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::group(['prefix'=>'admin'],function (){
-Route::get('/login',[LoginController::class,'login'])->name('admin.login');
 
-  Route::group(['middleware'=>['auth','admin']],function(){
+Route::get('admin/login',[LoginController::class,'login'])->name('admin.login');
+Route::post('/dologin',[LoginController::class,'storelogin'])->name('admin.dologin.store');
+Route::get('auth/facebook', [LoginController::class, 'facebookRedirect'])->name('login.facebook');
+Route::get('auth/facebook/callback', [LoginController::class, 'loginWithFacebook']);
+
+  Route::group(['prefix'=>'admin','middlewire'=>'auth'],function(){
     Route::get('/', [HomeController::class,'dashboard'])->name('dashboard');
+    Route::get('/logout',[LoginController::class,'Logout'])->name('admin.logout');
 
    
     //food
@@ -70,4 +74,3 @@ Route::get('/login',[LoginController::class,'login'])->name('admin.login');
     Route::post('/store/permission/',[PermissionController::class,'storepermission'])->name('admin.permission.store');
 
  });
-});
