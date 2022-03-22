@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Role;
+use  Brian2694\Toastr\Facades\Toastr;
 
 class UserController extends Controller
 {
@@ -51,15 +52,14 @@ class UserController extends Controller
         User::create([
             'role_id'=>$request->role,
              'name' =>$request->username,
-             'address'=>$request->address,
-             'gender'=>$request->gender,
              'email'=>$request->email,
              'password'=>bcrypt($request->password),
              'phone'=>$request->phonenumber,
             'image'=>$userimage,
          
         ]);
-        return redirect()->back()->with('msg','User created successfully');
+        Toastr::success('User Created Successfully', 'success');
+        return redirect()->back();
     }
 
     /**
